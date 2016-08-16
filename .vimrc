@@ -36,6 +36,10 @@ Plugin 'mattn/emmet-vim'
 Plugin 'briancollins/vim-jst'
 " Adds autoComplete to Vim
 Plugin 'Valloric/YouCompleteMe'
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
+" Git diff in the gutter
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,6 +61,8 @@ filetype plugin indent on    " required
 " ===============
 
 :syntax on
-:set tabstop=2 number shiftwidth=2 clipboard=unnamed relativenumber
+:set tabstop=2 number shiftwidth=2 clipboard=unnamed relativenumber noexpandtab autoread
 :colorscheme predawn
 map <F2> :NERDTreeToggle<CR>
+runtime macros/matchit.vim
+
