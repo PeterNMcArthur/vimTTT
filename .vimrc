@@ -40,6 +40,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 " Git diff in the gutter
 Plugin 'airblade/vim-gitgutter'
+" easy commenting
+Plugin 'scrooloose/nerdcommenter'
+"JSX syntax higlighting and indenting	
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +67,7 @@ filetype plugin indent on    " required
 :syntax on
 :set tabstop=2 number shiftwidth=2 clipboard=unnamed relativenumber noexpandtab autoread
 :colorscheme predawn
+let g:jsx_ext_required = 0
 map <F2> :NERDTreeToggle<CR>
 runtime macros/matchit.vim
 
